@@ -1,0 +1,234 @@
+/* src/assets/main.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app {
+  display: grid;
+  gap: 1rem;
+}
+
+.header {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.view-switch {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.card h2 {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.panel h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.object-form {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.object-form input,
+.object-form select,
+.object-form textarea {
+  width: 100%;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+
+.object-form textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 1px solid #0f172a;
+  background: #0f172a;
+  color: #fff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #fff;
+  color: #0f172a;
+}
+
+button.inline {
+  margin-left: 0.35rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.75rem;
+}
+
+button.danger {
+  border-color: #991b1b;
+  background: #991b1b;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.checkbox-label input {
+  width: auto;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #f1f5f9;
+  text-align: left;
+  padding: 0.45rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+th {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.dictionary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.dictionary-grid ul {
+  margin-top: 0.4rem;
+  padding-left: 1.1rem;
+}
+
+.dictionary-grid li {
+  margin-bottom: 0.35rem;
+}
+
+.console-list {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.6rem;
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.console-entry {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.55rem;
+  background: #fff;
+}
+
+.console-entry.error {
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+.console-top {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.console-entry p {
+  margin-bottom: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.console-entry pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.78rem;
+  padding: 0.45rem;
+  border-radius: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}

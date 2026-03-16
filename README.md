@@ -40,3 +40,37 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Supabase - inicjalizacja CRM
+
+1. Otwórz SQL Editor w Supabase.
+2. Wklej i uruchom skrypt z pliku `supabase/init_crm.sql`.
+3. Upewnij się, że `.env.local` zawiera poprawne wartości:
+  - `VITE_SUPABASE_URL`
+  - `VITE_SUPABASE_ANON_KEY`
+4. Uruchom aplikację: `npm run dev`.
+
+## RLS i tryb bez logowania (dev)
+
+Jeśli widzisz błąd typu `new row violates row-level security policy`, to znaczy, że działasz jako rola `anon`, a polityki masz tylko dla `authenticated`.
+
+W SQL Editor uruchom:
+
+- `supabase/rls_dev_anon_patch.sql`
+
+To odblokuje CRUD dla roli `anon` w środowisku developerskim.
+
+## Debugowanie CRUD
+
+W aplikacji jest dedykowany widok `Konsola`, który pokazuje:
+
+- start/sukces operacji CRUD,
+- dokładne błędy API (`operation`, `code`, `details`, `hint`),
+- aktualny UUID użytkownika pobrany z `VITE_SUPABASE_USER_ID`.
+
+## UUID użytkownika z ENV
+
+Aplikacja używa stałego UUID użytkownika z `VITE_SUPABASE_USER_ID` (nie z sesji Supabase).
+
+- tworzenie osoby ustawia `utworzyl_uzytkownik_id` z ENV,
+- tworzenie/edycja historii kontaktu ustawia `uzytkownik_id` z ENV.
